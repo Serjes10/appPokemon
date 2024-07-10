@@ -1,0 +1,63 @@
+<section class="section-config">
+  <h1 class="section-config__title"><b>¡Hola! </b>Configuremos tu perfil</h1>
+
+  <p class="section-config__sub-title">Queremos conocerte mejor.</p>
+
+
+  <div class="section-config__content">
+    <div class="section-config-content__info">
+      <p class="section-config-content-info__title">Imágen perfil</p>
+
+      <div class="section-config-content-info__bucket">
+        <img src="./assets/images/user_24px.png" alt="User Images" title="User Images" loading="lazy" width="100" height="100" *ngIf="imgBase64 === ''">
+        <img [src]="imgBase64" alt="User Images" title="User Images" loading="lazy" width="100" height="100" *ngIf="imgBase64 != ''">
+      </div>
+
+      <div class="section-config-content-info__file" (click)="fileInput.click()">
+        <p class="section-config-content-info-file__title">{{(nameImagen === '')? 'Adjunta una foto' : nameImagen}}</p>
+        <mat-icon class="section-config-content-info-file__icon material-icons-two-tone">cloud_upload</mat-icon>
+        <input type="file" #fileInput hidden (change)="onFileSelect($event)">
+      </div>
+    </div>
+
+    <div class="section-config-content__form">
+      <p class="section-config-content-form__title">Tu información</p>
+      <p class="section-config-content-form__description">Completa la siguiente información para completar tu perfil</p>
+
+      <div class="section-config-content-form__bucket">
+        <form [formGroup]="profileForm">
+          <div class="row">
+            <mat-form-field appearance="outline" class="col-md-12">
+              <mat-label>Nombre</mat-label>
+              <input matInput placeholder="Nombre" type="text" formControlName="name" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="col-md-12">
+              <mat-label>Pasatiempo favorito</mat-label>
+              <mat-select formControlName="hobby">
+                <mat-option class="mat-option-personalizate" *ngFor="let hobby of hobbyArray" [value]="hobby">
+                  {{hobby}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="col-md-12">
+              <mat-label>Cumpleaños</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="age" [max]="fechaActual" required>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="col-md-12">
+              <mat-label>{{titleDocument}}</mat-label>
+              <input matInput [placeholder]="titleDocument" type="text" formControlName="numDocument" [mask]="mask" >
+            </mat-form-field>
+          </div>
+
+        </form>
+      </div>
+
+      <button type="button" class="section-config-content-form__save" (click)="saveProfile()" [disabled]="profileForm.invalid">Continuar</button>
+    </div>
+  </div>
+</section>

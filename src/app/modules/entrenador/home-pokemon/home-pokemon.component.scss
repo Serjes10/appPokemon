@@ -1,0 +1,344 @@
+.section-config__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  color: #000000;
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+}
+
+
+.section-config-title__before {
+  font-size: 24px;
+  color: #01426A;
+  margin-left: 10px;
+}
+
+
+.section-config__sub-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #868686;
+  margin-bottom: 0px;
+}
+
+
+.section-config__content {
+  margin-top: 54px;
+  display: flex;
+  justify-content: center;
+  gap: 251px;
+}
+
+.section-config-content__info {
+  border-radius: 50px;
+  width: 392px;
+  height: 600px;
+  background-color: #FFC600;
+}
+
+
+.section-config-content__form {
+  width: 637px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-config-content-info__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0px 40px;
+  margin-top: 26px;
+  margin-bottom: 35px;
+}
+
+.section-config-content-info__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #4B4B4B;
+
+}
+
+
+.section-config-content-info__bucket {
+  width: 269px;
+  height: 269px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 14px solid #FFFFFF;
+  background: #E7EFF5;
+  margin: auto;
+  border-radius: 50%;
+}
+
+
+.section-config-content-info__file {
+  width: 334px;
+  height: 70px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px dashed #9BB8D3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-top: 51px;
+
+}
+
+.section-config-content-info-file__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #2C85BC;
+  margin-bottom: 0px;
+  max-width: 110px;
+}
+
+.section-config-content-info-file__icon {
+  color: #2C85BC;
+}
+
+.section-config-content-info__file:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.section-config-content-form__title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 48px;
+  color: #01426A;
+  margin-bottom: 0px;
+}
+
+.section-config-content-form__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #868686;
+  margin-bottom: 31px;
+}
+
+
+.section-config-content-form__save {
+  width: 222px;
+  height: 50px;
+  min-height: 50px;
+  border-radius: 10px;
+  background-color: #01426A;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 68px;
+  border: none;
+}
+
+::ng-deep .mat-option-personalizate.mat-mdc-option-active {
+  background-color: #E7EFF5 !important;
+}
+
+::ng-deep .mat-option-personalizate:hover {
+  background-color: #E7EFF5 !important;
+}
+
+::ng-deep .mat-option-personalizate {
+  border: 0.5px solid #9BB8D3
+}
+
+.section-config-content-form__save:disabled {
+  background-color: #E6E6E6;
+  color: #868686;
+}
+
+
+.user_image {
+  width: 249px;
+  height: 249px;
+  border-radius: 50%;
+}
+
+.section-config-content-info__profile-info {
+  width: 319px;
+  height: 124px;
+  margin: auto;
+}
+
+.section-config-content-info-profile-info__text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #4B4B4B;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-config-content-form__search {
+  margin-top: 29px;
+}
+
+
+
+::ng-deep .section-config-content-form__bucket {
+  .cdk-virtual-scroll-content-wrapper{
+    display: flex;
+    column-gap: 8px;
+    row-gap: 8px;
+    flex-wrap: wrap;
+    padding: 26px 0px;
+  }
+}
+
+
+.section-config-content-form-bucket__pokemon {
+  width: 637px;
+  height: 317px;
+  display: flex;
+  box-shadow: 0px 8px 28px 0px #78B1B51A;
+  background-color: #F2F2F2;
+  border-radius: 15px;
+  padding: 23px;
+  align-items: center;
+}
+
+.section-config-content-form-bucket-pokemon__info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-config-content-form-bucket-pokemon__stats{
+  width: 362px;
+  display: flex;
+  justify-content: center;
+  gap: 31px;
+}
+
+.section-config-content-form-bucket__content {
+  width: 163px;
+  height: 106px;
+  border-radius: 20px;
+
+  padding-bottom: 20px;
+}
+
+.section-config-content-form-bucket-content__badge {
+  width: 135px;
+  height: 25px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #01426A;
+}
+
+.section-config-content-form-bucket-content-badge__text {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  color: #000000;
+  margin-bottom: 0px;
+  text-transform: capitalize;
+}
+
+.section-config-content-form-bucket-content-badge__sub-text{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: start;
+  color: #000000;
+  margin-bottom: 0px;
+  text-transform: capitalize;
+}
+
+
+.section-config-content-form-bucket-pokemon__img {
+  object-fit: cover;
+  width: 250px;
+  height: 125px;
+}
+
+
+.example-viewport {
+  width: 690px;
+  height: 628px;
+}
+
+
+.section-config-content-form__encabezado{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-config-content-form__edit{
+  width: 134px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #01426A;
+  color: #01426A;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  gap: 8px;
+}
+
+.section-config-content-form__edit mat-icon{
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+
+.section-config-content-form-bucket-pokemon-stats__info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-config-content-form-bucket-pokemon-stats-info__title{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #4B4B4B;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+::ng-deep .section-config-content-form-bucket-pokemon-stats-info__title mat-progress-bar{
+  width: 159px;
+  height: 9px;
+  box-shadow: 1px 1px 2px 0px #AEAEC033 inset;
+  box-shadow: -1px -1px 1px 0px #FFFFFFB2 inset;
+
+  .mdc-linear-progress__bar-inner{
+    border-color:  #7ED876 !important;
+  }
+}
+
+.section-config-content-form-bucket-pokemon__progress{
+  width: 161px;
+  gap: 27px;
+  display: flex;
+  flex-direction: column;
+}

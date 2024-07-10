@@ -1,0 +1,59 @@
+<section class="section-config">
+  <h1 class="section-config__title"><b>¡Hola {{profile_info?.name}}!</b> <button mat-raised-button
+      class="section-config-content-form__edit" [routerLink]="['/app/entrenador/perfil']"
+      style="margin-left: 28px;"><mat-icon>create</mat-icon> Editar perfil</button></h1>
+
+  <div class="section-config__content">
+    <div class="section-config-content__info">
+      <div class="section-config-content-info__header">
+        <p class="section-config-content-info__title">Entrenador</p>
+        <img src="./assets/images/Group.svg" alt="Medalla" title="Medalla" loading="lazy"
+          class="section-config-content-info-header__medal">
+      </div>
+
+      <div class="section-config-content-info__bucket">
+        <img [src]="profile_info?.img" alt="User Images" title="User Images" loading="lazy" width="100" height="100"
+          class="user_image">
+      </div>
+
+      <div class="section-config-content-info__profile-info">
+        <p class="section-config-content-info-profile-info__text"><b>Pasatiempo:</b> {{profile_info?.hobby}}</p>
+        <p class="section-config-content-info-profile-info__text"><b>Edad:</b> {{profile_info?.ageNumber}}</p>
+        <p class="section-config-content-info-profile-info__text"><b>DUI:</b> {{profile_info?.numDocument}}</p>
+
+      </div>
+    </div>
+
+    <div class="section-config-content__form">
+      <div class="section-config-content-form__encabezado">
+        <p class="section-config-content-form__title">Mis Pokémon</p>
+        <button mat-raised-button class="section-config-content-form__edit"
+          [routerLink]="['/app/entrenador/equipo-pokemon']"><mat-icon>create</mat-icon> Editar</button>
+      </div>
+      <cdk-virtual-scroll-viewport appendOnly itemSize="50"
+        class="example-viewport section-config-content-form__bucket">
+        <ng-container *cdkVirtualFor="let item of equipoPokemon | search: this.searchForm.value: ['id', 'name']">
+          <div class="section-config-content-form-bucket__pokemon">
+            <div class="section-config-content-form-bucket-pokemon__info">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{item?.id}}.png"
+                loading="lazy" class="section-config-content-form-bucket-pokemon__img" />
+
+                <p class="section-config-content-form-bucket-content-badge__text">{{item?.name}}</p>
+                <p class="section-config-content-form-bucket-content-badge__sub-text" > <span *ngFor="let type of item?.info?.types; let i=index;">{{type?.type?.name}}  {{(i + 1 === item.info.types.length) ? '' : '/'}}</span></p>
+            </div>
+            <div class="section-config-content-form-bucket-pokemon__stats" *ngIf="item?.info?.stats">
+              <div class="section-config-content-form-bucket-pokemon-stats__info">
+                <p class="section-config-content-form-bucket-pokemon-stats-info__title" *ngFor="let stat of item.info.stats">{{stat?.stat?.name}} <mat-progress-bar mode="determinate" [value]="stat?.base_stat"></mat-progress-bar></p>
+              </div>
+
+            </div>
+
+          </div>
+        </ng-container>
+      </cdk-virtual-scroll-viewport>
+
+
+
+    </div>
+  </div>
+</section>

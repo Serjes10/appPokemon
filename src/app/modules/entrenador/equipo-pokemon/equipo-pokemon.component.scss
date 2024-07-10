@@ -1,0 +1,256 @@
+.section-config__title {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 52.5px;
+  color: #185A7D;
+  margin-bottom: 9px;
+}
+
+
+.section-config-title__before {
+  font-size: 24px;
+  color: #01426A;
+  margin-left: 10px;
+}
+
+
+.section-config__sub-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #868686;
+  margin-bottom: 0px;
+}
+
+
+.section-config__content {
+  margin-top: 54px;
+  display: flex;
+  justify-content: center;
+  gap: 251px;
+}
+
+.section-config-content__info {
+  border-radius: 50px;
+  width: 392px;
+  height: 600px;
+  background-color: #FFC600;
+}
+
+
+.section-config-content__form {
+  width: 534px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-config-content-info__title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 52.5px;
+  text-align: center;
+  color: #185A7D;
+  margin-top: 26px;
+  margin-bottom: 35px;
+}
+
+
+.section-config-content-info__bucket {
+  width: 269px;
+  height: 269px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 14px solid #FFFFFF;
+  background: #E7EFF5;
+  margin: auto;
+  border-radius: 50%;
+}
+
+
+.section-config-content-info__file {
+  width: 334px;
+  height: 70px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px dashed #9BB8D3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-top: 51px;
+
+}
+
+.section-config-content-info-file__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #2C85BC;
+  margin-bottom: 0px;
+  max-width: 110px;
+}
+
+.section-config-content-info-file__icon {
+  color: #2C85BC;
+}
+
+.section-config-content-info__file:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.section-config-content-form__title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 48px;
+  color: #01426A;
+  margin-bottom: 0px;
+}
+
+.section-config-content-form__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #868686;
+  margin-bottom: 31px;
+}
+
+
+.section-config-content-form__save {
+  width: 222px;
+  height: 50px;
+  min-height: 50px;
+  border-radius: 10px;
+  background-color: #01426A;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 68px;
+  border: none;
+}
+
+::ng-deep .mat-option-personalizate.mat-mdc-option-active {
+  background-color: #E7EFF5 !important;
+}
+
+::ng-deep .mat-option-personalizate:hover {
+  background-color: #E7EFF5 !important;
+}
+
+::ng-deep .mat-option-personalizate {
+  border: 0.5px solid #9BB8D3
+}
+
+.section-config-content-form__save:disabled {
+  background-color: #E6E6E6;
+  color: #868686;
+}
+
+
+.user_image {
+  width: 249px;
+  height: 249px;
+  border-radius: 50%;
+}
+
+.section-config-content-info__profile-info {
+  width: 319px;
+  height: 124px;
+  margin: auto;
+}
+
+.section-config-content-info-profile-info__text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #4B4B4B;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-config-content-form__search {
+  margin-top: 29px;
+}
+
+
+
+::ng-deep .section-config-content-form__bucket {
+  .cdk-virtual-scroll-content-wrapper{
+    display: flex;
+    column-gap: 8px;
+    row-gap: 8px;
+    flex-wrap: wrap;
+  }
+}
+
+
+.section-config-content-form-bucket__pokemon {
+  width: 163.44px;
+  height: 137.58px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.section-config-content-form-bucket__pokemon{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+
+.section-config-content-form-bucket__content {
+  width: 163px;
+  height: 106px;
+  border-radius: 20px;
+  bottom: 0px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 20px;
+  position: absolute;
+}
+
+.section-config-content-form-bucket-content__badge {
+  width: 135px;
+  height: 25px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #01426A;
+}
+
+.section-config-content-form-bucket-content-badge__text {
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  margin-bottom: 0px;
+  text-transform: capitalize;
+}
+
+
+.section-config-content-form-bucket-pokemon__img {
+  position: absolute;
+  z-index: 2;
+  object-fit: cover;
+  width: 150px;
+  height: 125px;
+  top: -20px;
+}
+
+
+.example-viewport {
+  width: 534px;
+  height: 428px;
+}
+
+

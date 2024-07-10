@@ -1,0 +1,56 @@
+<section class="section-config">
+  <h1 class="section-config__title"><b>¡Ya casi términamos!</b></h1>
+
+  <p class="section-config__sub-title">Revisa la información, y completa lo solicitado.</p>
+
+
+  <div class="section-config__content">
+    <div class="section-config-content__info">
+      <p class="section-config-content-info__title">{{profile_info?.name}}</p>
+
+      <div class="section-config-content-info__bucket">
+        <img [src]="profile_info?.img" alt="User Images" title="User Images" loading="lazy" width="100" height="100"
+          class="user_image">
+      </div>
+
+      <div class="section-config-content-info__profile-info">
+        <p class="section-config-content-info-profile-info__text"><b>Pasatiempo:</b> {{profile_info?.hobby}}</p>
+        <p class="section-config-content-info-profile-info__text"><b>Edad:</b> {{profile_info?.ageNumber}}</p>
+        <p class="section-config-content-info-profile-info__text"><b>DUI:</b> {{profile_info?.numDocument}}</p>
+
+      </div>
+    </div>
+
+    <div class="section-config-content__form">
+      <p class="section-config-content-form__title">Pokémon</p>
+      <p class="section-config-content-form__description">Selecciona 3 Pokémon para que sean parte de tu equipo</p>
+
+      <mat-form-field appearance="fill" class="section-config-content-form__search">
+        <mat-label>Buscar por índice, nombre...</mat-label>
+        <input matInput placeholder="Buscar por índice, nombre..." type="text" [formControl]="searchForm">
+      </mat-form-field>
+
+      <cdk-virtual-scroll-viewport appendOnly itemSize="50"
+        class="example-viewport section-config-content-form__bucket">
+        <ng-container *cdkVirtualFor="let item of pokemonesForm.controls | searchFormReactive: this.searchForm.value: ['id', 'name']">
+          <div class="section-config-content-form-bucket__pokemon" (click)="seleccionaPokemon(item)">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{item?.value.id}}.png"
+              loading="lazy" class="section-config-content-form-bucket-pokemon__img" />
+
+            <div class="section-config-content-form-bucket__content" [ngStyle]="{'background-color': item.value.seleccionado ? '#FFC600' : '#F2F2F2' }">
+              <div class="section-config-content-form-bucket-content__badge">
+                <p class="section-config-content-form-bucket-content-badge__text">{{item?.value.id}}</p>
+                <p class="section-config-content-form-bucket-content-badge__text">{{item?.value.name}}</p>
+
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </cdk-virtual-scroll-viewport>
+
+
+
+      <button type="button" class="section-config-content-form__save" (click)="guardarEquipo()">Guardar</button>
+    </div>
+  </div>
+</section>

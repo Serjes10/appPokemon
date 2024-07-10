@@ -1,27 +1,29 @@
-# AppPokemon
+# Proyecto Angular: Entrenador Pokémon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+Este es un proyecto Angular para gestionar el perfil, equipo y página de inicio de un entrenador Pokémon.
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js (v16 o superior)
+- Angular CLI (v16 o superior)
+- Docker (opcional, para despliegue en contenedores)
 
-## Code scaffolding
+## Instalación de dependencias
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para instalar las dependencias del proyecto, ejecuta el siguiente comando en la raíz del proyecto:
 
-## Build
+```sh
+npm install -f
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Levantar proyecto
 
-## Running unit tests
+```sh
+ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+docker build -t app-pokemon .
+docker run -p 8080:4200 app-pokemon
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
