@@ -18,9 +18,12 @@ npm install -f
 
 ## Levantar proyecto
 
+### En caso de levantarlo manualmente
 ```sh
 ng serve
 ```
+
+### En caso de querer levantar con docker
 
 ```sh
 docker build -t app-pokemon .
